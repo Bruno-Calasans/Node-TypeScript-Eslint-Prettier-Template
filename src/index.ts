@@ -10,6 +10,3 @@ app.get("/", (req: Request, res: Response) => {
 app.listen(8000, (): void => {
 	console.log("Server running!")
 })
-
-
-
