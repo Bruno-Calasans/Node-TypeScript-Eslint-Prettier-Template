@@ -1,6 +1,4 @@
-
-
 export default {
-    a: 10,
-    b: 'teste'
+  a: 10,
+  b: 'teste',
 }

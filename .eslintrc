@@ -1,13 +1,12 @@
 {
 	"env": {
 		"browser": true,
-		"es2021": true,
-		"jest": true
+		"es2021": true
 	},
 	"extends": [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
-		"prettier"
+		"plugin:prettier/recommended"
 	],
 	"overrides": [],
 	"parser": "@typescript-eslint/parser",
@@ -15,9 +14,16 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
-	"plugins": ["@typescript-eslint"],
+	"plugins": ["@typescript-eslint", "prettier"],
 	"rules": {
 		"no-empty-function": "off",
-		"@typescript-eslint/no-empty-function": "off"
+		"@typescript-eslint/no-empty-function": "off",
+		"prettier/prettier": [
+			"error",
+			{
+			  "endOfLine": "auto",
+			  "printWidth": 80
+			}
+		  ],
 	}
 }
