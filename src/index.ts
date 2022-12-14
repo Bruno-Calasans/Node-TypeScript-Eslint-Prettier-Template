@@ -1,15 +1,12 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { Client, Collection } from 'discord.js'
-import { DISCORD_TOKEN } from './config/variables'
-import loadhandlers from './functions/loadHandlers'
+import express from 'express'
+import type { Request, Response } from 'express'
 
-// Setting Commands Collection
+const app = express()
 
-// Initial Setup
-const client = new Client({ intents: ['Guilds', 'GuildMessages'] })
-client.commands = new Collection()
-loadhandlers(client)
+app.get('/', (req: Request, res: Response) => {
+  res.send('Home Page')
+})
 
-client.login(DISCORD_TOKEN)
+app.listen(8000, (): void => {
+  console.log('Server running!')
+})
