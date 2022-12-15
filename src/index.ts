@@ -10,3 +10,26 @@ app.get('/', (req: Request, res: Response) => {
 app.listen(8000, (): void => {
   console.log('Server running!')
 })
+
+// const weaponRestrictions = {
+//   apitudeTypes: {
+//     only: [],
+//     except: []
+//   },
+//   rangeTypes: {
+//     only: [],
+//     except: []
+//   },
+//   rangeSubTypes: {
+//     only: [],
+//     except: []
+//   },
+//   damageType: {
+//     only: [],
+//     except: []
+//   },
+//   types: {
+//     only: [],
+//     except: []
+//   },
+// }
